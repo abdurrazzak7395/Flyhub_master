@@ -1,0 +1,146 @@
+package Flightbook;
+
+import java.awt.AWTException;
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import FlightBook.FlightBookLib;
+import Testcomponents.BaseTest;
+import loginuat.LoginLibUat;
+
+public class flightBook {
+
+	public class LoginTest extends BaseTest {
+
+		public WebDriver driver;
+		private FlightBookLib FlightBookSource;
+
+		@BeforeClass
+		public void beforeClass() throws IOException, InterruptedException {
+			driver = BaseTest.initializeDriver();
+			FlightBookSource = new FlightBookLib(driver);
+
+		}
+
+		@BeforeMethod
+		public void beforeMethod() throws Exception {
+			LoginLibUat.driver = driver;
+			LoginLibUat.navigateToAgentPortal("http://uat.dev.flyhub.com/login");
+
+		} 
+		
+		@AfterMethod
+		public void afterMethod() throws Exception {
+			LoginLibUat.driver = driver;
+			LoginLibUat.navigateToAgentPortal("http://uat.dev.flyhub.com/login");
+
+		} 
+		
+		
+
+		@Test
+		public void verifyFlightBookingforoneadult() throws InterruptedException, AWTException
+		{
+			Thread.sleep(2000);
+	        FlightBookSource.login();
+	    
+	        Thread.sleep(20000);
+	       FlightBookSource.domesticOneWayBookAdult();               
+	        
+	        
+	        FlightBookSource. viewFareorBookNow();
+	        
+	        FlightBookSource.bookingForOnewayagentportal ();
+	       
+	        
+	       FlightBookSource.bookingConfirmationEmail();
+	    
+	        FlightBookSource.clearCache();   
+	          
+	        FlightBookSource.loginn();
+	       
+	       FlightBookSource.ticketedConfirmationEmail(); 
+	      
+	    
+			
+		}   
+		
+	  /* @Test
+		public void verifydomesticOneWayBookAdultandchild() throws Exception {
+			FlightBookSource.login();
+			
+			FlightBookSource.domesticOneWayBookAdultandchild();
+			
+			FlightBookSource. youre();
+			FlightBookSource.bookingfordomesticOneWayBookAdultandchild();
+			
+			FlightBookSource.bookingConfirmationEmail();
+	        
+			FlightBookSource.clearCache();
+		    
+			FlightBookSource.midOfficeTicketingFordomesticOneWayBookAdultandchild();
+		
+		    FlightBookSource.ticketedConfirmationEmail(); 
+		    
+		}  
+		
+	 @Test
+		public void VerifydomesticReturnBooktwoAdults() throws InterruptedException, AWTException {
+			FlightBookSource.login();
+			Thread.sleep(5000);
+			FlightBookSource.domesticReturnBooktwoAdults();
+			Thread.sleep(5000);
+			FlightBookSource.bookingdomesticReturnBooktwoAdults(); 
+			
+			
+			
+			FlightBookSource.bookingConfirmationEmail();
+			Thread.sleep(5000);
+			FlightBookSource.clearCache();
+	        Thread.sleep(5000);
+	   //     FlightBookSource.loginn();
+	        Thread.sleep(5000);
+	        FlightBookSource.ticketedConfirmationEmail();
+	        Thread.sleep(5000);  
+	        
+			
+
+		} 
+	
+		@Test
+	public void VerifyInternationalOnewayoneAdultoneChildoneInfant() throws InterruptedException
+	{
+			FlightBookSource.login();
+		FlightBookSource.InternationalOnewayoneAdultoneChildoneInfant();
+	}  
+		
+		@Test
+		public void VerifyInternationalReturnTwoAdultTwoChildOneInfant() throws InterruptedException
+		{
+				FlightBookSource.login();
+				FlightBookSource.InternationalReturnTwoAdultTwoChildOneInfant();
+		} 
+		 
+		@Test
+		public void VerifyInternational() throws InterruptedException
+		{
+				FlightBookSource.login();
+				FlightBookSource.multiWayTwoAdults();
+		} 
+		
+		@Test
+		public void VerifyInternational() throws InterruptedException, AWTException
+		{
+				FlightBookSource.clearCache();
+				FlightBookSource.loginn();
+				
+		}*/
+	}
+	
+	
+}

@@ -1,0 +1,68 @@
+package login;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import Testcomponents.BaseTest;
+import page.login.LoginLib;
+
+
+
+
+
+public class LoginTest extends BaseTest{
+	
+	public WebDriver driver;
+	private LoginLib loginSource;
+	String midofficeUrl;
+	
+	public void getmidoffice() throws IOException {
+
+		// properties class
+
+		Properties prop = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\flyhub\\resources\\GlobalData.properties");
+		prop.load(fis);
+	     midofficeUrl = prop.getProperty("midofficeUrl");
+	}
+
+	
+	
+	@BeforeClass 
+	public void beforeClass () throws IOException
+	{
+		driver=BaseTest.initializeDriver();
+		loginSource=new LoginLib(driver);
+		
+	}
+	
+    @BeforeMethod
+	public void beforeMethod ()
+	{
+		loginSource.navigateToFlyhub("http://bdmid.dev.flyhub.com");
+			
+	}
+	
+
+     @Test
+ public void verifyMidOfficeLogin ()
+ { 
+
+	loginSource.getuserNameBox().sendKeys("bdinfo@flyhub.com");
+	loginSource.getpasswordBox().sendKeys("bD$nfo@123");
+	loginSource.getloginButton().click();
+	
+	
+	String actualUrl="http://bdmid.dev.flyhub.com";
+	String expectedUrl= driver.getCurrentUrl();
+	
+	
+ Assert.assertEquals (actualUrl,expectedUrl);
+ }}

@@ -1,0 +1,122 @@
+package page.login;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import jdk.internal.org.jline.utils.Log;
+import jdk.jfr.internal.Logger;
+
+public class LoginLib extends LoginLocator{
+	 static WebDriver driver;
+	public 	LoginLib(WebDriver driver){
+		
+		LoginLib.driver=driver;
+		PageFactory.initElements(driver, this);
+		
+		
+	}
+	
+	/**
+	 * this method is used to navigate to given midofficeUrl
+	 * @param url : midofficeUrl to be open
+	 */
+	public void navigateToFlyhub(String midofficeUrl)
+	{
+	
+        
+		try {
+			driver.get(midofficeUrl);
+			System.out.println("application is opening");
+		} 
+		catch(Exception e)
+		{
+		System.out.println(e.getMessage());
+		
+		
+		}
+		
+			
+		}
+	
+	
+/**
+ * this method is used to login to application
+ * @param url : 
+ */
+      public static void validLogin()
+      {
+    	    getuserNameBox().sendKeys("bdinfo@flyhub.com");
+    		getpasswordBox().sendKeys("bD$nfo@123");
+    		getloginButton().click();
+      }
+      
+      
+      public static void invalidLogin()
+      {
+    	    getuserNameBox().sendKeys("bdinf@gmail.com");
+    		getpasswordBox().sendKeys("bD$nfo3");
+    		getloginButton().click();
+      }
+      
+      public static void continueWithGoogle() throws InterruptedException
+      {
+    	  getcontinueWithGoogle().click();
+    	 // getuseAnotherAccount().click();
+    	  getEmail().sendKeys("foggdyani@gmail.com");
+    	  Thread.sleep(6000);
+    	  
+    	  getNext().click();
+    	  Thread.sleep(6000);
+    	  
+    	  getPassword().sendKeys("Azuga@123");
+    	  Thread.sleep(5000);
+    	  getNext().click();
+    	  Thread.sleep(60000);
+    	  
+      }   
+      public static void ForgotPassword ()
+      {
+    	    getforgotPassword().click();
+    	    getuserName().sendKeys("msd164284@gmail.com");
+    	    getSubmit().click();
+    	    
+    		
+      }
+      
+      public void forgotPasswordEmailVerification() throws InterruptedException
+
+  	{
+  		
+  		
+  		driver.get("https://accounts.google.com/InteractiveLogin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Fhl%3Den&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%3Fhl%3Den&hl=en&osid=1&passive=1209600&service=mail&ifkv=AXo7B7X0I1jfR2r4b8bH44QePiWcfzFdq4k3b_tltjb-rKcveAcR-gQsPtFGBM7pLrLlK3UnvxA2dA&flowName=GlifWebSignIn&flowEntry=ServiceLogin");
+  		
+  		getEmail().sendKeys("msd164284@gmail.com");
+  		
+  	
+  		
+  		getNext().click();
+  		
+  		Thread.sleep(60000);
+  		
+  		getPassword().sendKeys("iojidfewmqbdojca");
+  		Thread.sleep(3000);
+  		getNext().click();
+  		
+  		Thread.sleep(6000);
+  		getInbox().click();
+  		
+  		Thread.sleep(7000);
+  		List<WebElement> allMessages = driver.findElements(By.xpath("//*[contains(text(), 'Forgot Passowrd')]"));
+  	      if(allMessages.isEmpty()) {
+  	    	  System.out.println("Test not passed");
+  	      }else {
+  	    	  System.out.println("Test passed");}
+
+  	} 
+      
+}

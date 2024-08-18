@@ -1,0 +1,79 @@
+package FlightBook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+
+import page.login.LoginLib;
+
+
+public class FlightBookLib extends FlightBookLocator {
+
+	static WebDriver driver;
+
+	public FlightBookLib(WebDriver driver) {
+
+		FlightBookLib.driver = driver;
+		PageFactory.initElements(driver, this);
+
+	}
+	
+	
+	public static void login() throws InterruptedException {
+		getuserNameBox().sendKeys("messira786@gmail.com");
+		getpasswordBox().sendKeys("Azuga@12");
+
+		Thread.sleep(120000);
+		getloginButton().click();
+	}
+	
+	public void domesticOneWayBookAdult() throws InterruptedException
+	{
+		
+		getoneWayButton().click();
+		getFrom().sendKeys("DAC");
+		getTo().sendKeys("CXB");
+		getdepartureDate().sendKeys("20/09/2023");
+		getsearchFlights().click();
+		Thread.sleep(4000);
+		getbookNow().click();
+		Thread.sleep(3000);
+		getfirstGivenName().sendKeys("kyle");
+		getlastSurname().sendKeys("smith");
+		getpassengerAdultDob().click();
+		getpickpassengerAdultDob().click();
+		getpassportNumber().sendKeys("31195855");
+		getexpiresOn().click();
+		getpickexpiresOn().click(); 
+		getaddToTravellersList().click();
+		getemailAddress().sendKeys("messira786@gmail.com");
+		getmobileNumber().sendKeys("8767541298");
+		getfareRulescbox().click();
+		gettermsAndConditionscbox().click();
+		getinstantTicketing().click();
+		getconfirmBooking().click();
+	    
+		LoginLib.login();
+		getMenu().click();
+		getinprocessQueue().click();
+		getassignToMe().click();
+		getselectInProcessLink().click();
+		getstartTicketingOperation().click();
+		getselectVendor().click();
+		getselectingVendor().click();
+		getupdateVendor().click();
+		getticketUpdateManual().click();
+		getticketNumber().sendKeys("1278");
+		getticketUpdate().click();
+		getprintDownload().click();
+		getprintInvoice().click();
+		getprintCustomerInvoice().click();
+		getticketWithPrice().click();
+		getticketWithoutPrice().click();
+		getprintConfirmationWithPrice().click();
+		getprintConfirmationWithoutPrice().click();
+	}
+}
+	
+	
+
+

@@ -1,0 +1,342 @@
+package FlightBook;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class FlightBookLocator {
+
+	@FindBy(xpath = "//label[contains(text(),'One-Way')]")
+	private WebElement oneWayButton;
+
+	public WebElement getoneWayButton() {
+		return oneWayButton;
+	}
+
+	@FindBy(xpath = "//div[@id='from_airport_dropdown']//input[@id='departure_1']")
+	private WebElement From;
+
+	public WebElement getFrom() {
+		return From;
+	}
+
+	@FindBy(xpath = "//div[@id='to_airport_dropdown']//input[@id='arrival_1']")
+	private WebElement To;
+
+	public WebElement getTo() {
+		return To;
+	}
+
+	@FindBy(xpath = "//input[@id='prefferedCarriers']")
+	private WebElement preferredAirline;
+
+	public WebElement getpreferredAirline() {
+		return preferredAirline;
+	}
+
+	@FindBy(xpath = "//input[@id='departure_2']")
+	private WebElement fromSecond;
+
+	public WebElement getfromSecond() {
+		return fromSecond;
+	}
+
+	@FindBy(xpath = "//input[@id='arrival_2']")
+	private WebElement toSecond;
+
+	public WebElement gettoSecond() {
+		return toSecond;
+	}
+
+	@FindBy(xpath = "//button[contains(text(),'Search Flights')]")
+	private WebElement searchFlights;
+
+	public WebElement getsearchFlights() {
+		return searchFlights;
+	}
+
+	@FindBy(xpath = "//div[contains(@class,'highlights')]//div[@class='flightResultBody farebind columnBlock d-flex flex-wrap align-items-center justify-content-between']//div[@class='flightPriceBookBox d-inline-flex flex-wrap align-items-center justify-content-md-end']//button[@id='btnb1_0']")
+	private WebElement bookNow;
+
+	public WebElement getbookNow() {
+		return bookNow;
+	}
+
+	@FindBy(xpath = "//input[@id='Passengers_0__FirstName']")
+	private WebElement firstGivenName;
+
+	public WebElement getfirstGivenName() {
+		return firstGivenName;
+	}
+
+	@FindBy(xpath = "//input[@id='Passengers_0__LastName']")
+	private WebElement lastSurname;
+
+	public WebElement getlastSurname() {
+		return lastSurname;
+	}
+
+	@FindBy(xpath = "//input[@id='Passengers_0__DOB']")
+	private WebElement passengerAdultDob;
+
+	public WebElement getpassengerAdultDob() {
+		return passengerAdultDob;
+	}
+
+	@FindBy(xpath = "//div[@class='picker__day picker__day--infocus picker__day--selected picker__day--highlighted']")
+	private WebElement pickpassengerAdultDob;
+
+	public WebElement getpickpassengerAdultDob() {
+		return pickpassengerAdultDob;
+	}
+
+	@FindBy(xpath = "//input[@id='Passengers_0__PassportNum']")
+	private WebElement passportNumber;
+
+	public WebElement getpassportNumber() {
+		return passportNumber;
+	}
+
+	@FindBy(xpath = "//input[@id='Passengers_0__PassportNum']")
+	private WebElement expiresOn;
+
+	public WebElement getexpiresOn() {
+		return expiresOn;
+	}
+
+	@FindBy(xpath = "//div[@class='picker__day picker__day--infocus picker__day--selected picker__day--highlighted']")
+	private WebElement pickexpiresOn;
+
+	public WebElement getpickexpiresOn() {
+		return pickexpiresOn;
+	}
+
+	@FindBy(xpath = "//label[@class='m-0']")
+	private WebElement addToTravellersList;
+
+	public WebElement getaddToTravellersList() {
+		return addToTravellersList;
+	}
+
+	@FindBy(xpath = "//input[@id='Email']")
+	private WebElement emailAddress;
+
+	public WebElement getemailAddress() {
+		return emailAddress;
+	}
+
+	@FindBy(xpath = "//input[@id='PhoneNo']")
+	private WebElement mobileNumber;
+
+	public WebElement getmobileNumber() {
+		return mobileNumber;
+	}
+
+	@FindBy(xpath = "//label[@for='chkfare']")
+	private WebElement fareRulescbox;
+
+	public WebElement getfareRulescbox() {
+		return fareRulescbox;
+	}
+
+	@FindBy(xpath = "//label[@for='chkterms']")
+	private WebElement termsAndConditionscbox;
+
+	public WebElement gettermsAndConditionscbox() {
+		return termsAndConditionscbox;
+	}
+
+	@FindBy(xpath = "//button[contains(text(),'Book and Hold')]")
+	private WebElement bookAndHold;
+
+	public WebElement getbookAndHold() {
+		return bookAndHold;
+	}
+
+	@FindBy(xpath = "//button[contains(text(),'Instant Ticketing')]")
+	private WebElement instantTicketing;
+
+	public WebElement getinstantTicketing() {
+		return instantTicketing;
+	}
+
+	@FindBy(xpath = "//button[@id='btnbook']")
+	private WebElement confirmBooking;
+
+	public WebElement getconfirmBooking() {
+		return confirmBooking;
+	}
+
+	@FindBy(xpath = "//button[@id='OrderTktConfirmBtn']")
+	private WebElement orderTicket;
+
+	public WebElement getorderTicket() {
+		return orderTicket;
+	}
+
+	@FindBy(xpath = "//button[@id='confirmPaymentBtn']")
+	private WebElement confirmWithPayment;
+
+	public WebElement getconfirmWithPayment() {
+		return confirmWithPayment;
+	}
+
+	@FindBy(xpath = "//button[@class='navToggleBtn navigationToggleBtn']")
+	private WebElement Menu;
+
+	public WebElement getMenu() {
+		return Menu;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'In Process')]")
+	private WebElement inprocessQueue;
+
+	public WebElement getinprocessQueue() {
+		return inprocessQueue;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'AssignToMe')]")
+	private WebElement assignToMe;
+
+	public WebElement getassignToMe() {
+		return assignToMe;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'FHB23082358392')]")
+	private WebElement selectInProcessLink;
+
+	public WebElement getselectInProcessLink() {
+		return selectInProcessLink;
+	}
+
+	@FindBy(xpath = "//body[@class='hideHeaderMsg']/main/section[@class='searchMainSection']/div[@class='container']/div[@class='booking-flight']/div[@class='container print-container']/div[@class='row']/div[@class='col-lg-3']/div[@class='right-sidebar']/div[3]/button[1]")
+	private WebElement startTicketingOperation;
+
+	public WebElement getstartTicketingOperation() {
+		return startTicketingOperation;
+	}
+
+	@FindBy(xpath = "//div[@class='filter-option-inner']")
+	private WebElement selectVendor;
+
+	public WebElement getselectVendor() {
+		return selectVendor;
+	}
+
+	@FindBy(xpath = "//a[@id='bs-select-1-1']")
+	private WebElement selectingVendor;
+
+	public WebElement getselectingVendor() {
+		return selectingVendor;
+	}
+
+	@FindBy(xpath = "//button[@id='btnEditVendor']")
+	private WebElement updateVendor;
+
+	public WebElement getupdateVendor() {
+		return updateVendor;
+	}
+
+	@FindBy(xpath = "//body[@class='hideHeaderMsg']/main/section[@class='searchMainSection']/div[@class='container']/div[@class='booking-flight']/div[@class='container print-container']/div[@class='row']/div[@class='col-lg-3']/div[@class='right-sidebar']/div[6]/button[1]")
+	private WebElement ticketUpdateManual;
+
+	public WebElement getticketUpdateManual() {
+		return ticketUpdateManual;
+	}
+
+	@FindBy(xpath = "//div[@class='hal-form-field has-error']//input[@type='text']")
+	private WebElement ticketNumber;
+
+	public WebElement getticketNumber() {
+		return ticketNumber;
+	}
+
+	@FindBy(xpath = "//button[@id='btnManualUpdateafterticketing']")
+	private WebElement ticketUpdate;
+
+	public WebElement getticketUpdate() {
+		return ticketUpdate;
+	}
+
+	@FindBy(xpath = "//div[@class='d-flex align-items-center']")
+	private WebElement printDownload;
+
+	public WebElement getprintDownload() {
+		return printDownload;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'Print Invoice')]")
+	private WebElement printInvoice;
+
+	public WebElement getprintInvoice() {
+		return printInvoice;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'Print Customer Invoice')]")
+	private WebElement printCustomerInvoice;
+
+	public WebElement getprintCustomerInvoice() {
+		return printCustomerInvoice;
+	}
+
+	@FindBy(xpath = "//a[@class='hal-btn link-btn without-border collapsed']")
+	private WebElement ticketWithPrice;
+
+	public WebElement getticketWithPrice() {
+		return ticketWithPrice;
+	}
+
+	@FindBy(xpath = "//a[@class='hal-btn link-btn without-border collapsed']")
+	private WebElement ticketWithoutPrice;
+
+	public WebElement getticketWithoutPrice() {
+		return ticketWithoutPrice;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'Print Confirmation With Price')]")
+	private WebElement printConfirmationWithPrice;
+
+	public WebElement getprintConfirmationWithPrice() {
+		return printConfirmationWithPrice;
+	}
+
+	@FindBy(xpath = "//a[contains(text(),'Print Confirmation Without Price')]")
+	private WebElement printConfirmationWithoutPrice;
+
+	public WebElement getprintConfirmationWithoutPrice() {
+		return printConfirmationWithoutPrice;
+	}
+
+	@FindBy(xpath = "//input[@id='departuredate_1']")
+	private WebElement departureDate;
+
+	public WebElement getdepartureDate() {
+		return departureDate;
+	}
+	
+	@FindBy(xpath="//input[@id='txtUserName']")
+	private static WebElement userNameBox;
+
+	
+	public static WebElement getuserNameBox()
+	{
+		return userNameBox;
+	}
+	
+	@FindBy(xpath="//input[@id='txtPassword']")
+	private static WebElement passwordBox;
+	
+	public static WebElement getpasswordBox()
+	{
+		return passwordBox;
+	}
+	
+	@FindBy(xpath="//button[@id='load']")
+	private static WebElement loginButton;
+	
+	public static WebElement getloginButton()
+	{
+		return loginButton;
+	}
+	
+
+}
