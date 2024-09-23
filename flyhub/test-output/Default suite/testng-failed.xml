@@ -3,15 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="Flightbook.flightBook$LoginTest">
+      <class name="login.LoginTest">
         <methods>
+          <include name="verifyforgotPasswordFuctionalityForLogin"/>
           <include name="beforeClass"/>
+          <include name="verifyLoginFunctionalityByEnteringinValidUsernameandPassword"/>
+          <include name="verifyContinueWithGoogleFunctionalityForLogin"/>
           <include name="beforeMethod"/>
-          <include name="VerifydomesticReturnBooktwoAdults"/>
           <include name="tearDown"/>
-          <include name="afterMethod"/>
+          <include name="verifyLoginFunctionalityByEnteringValidUsernameandPassword"/>
         </methods>
-      </class> <!-- Flightbook.flightBook$LoginTest -->
+      </class> <!-- login.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

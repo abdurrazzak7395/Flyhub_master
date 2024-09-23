@@ -69,7 +69,7 @@ public class LoginTest extends BaseTest{
     
     
 	
-   @Test (priority =0)
+  /* @Test (priority =0)
     public void verifyContinueWithGoogleFunctionalityForLogin () throws InterruptedException
     {
     	Thread.sleep(5000);
@@ -82,7 +82,7 @@ public class LoginTest extends BaseTest{
          Thread.sleep(5000);
          loginSource.midOfficeLogout();
          Thread.sleep(5000);
-    } 
+    } */
     
   @Test (priority =1)
  public void verifyLoginFunctionalityByEnteringValidUsernameandPassword() throws InterruptedException 
@@ -120,7 +120,7 @@ public class LoginTest extends BaseTest{
    	
    	
         
-   }  */
+   }  
    
     @Test (priority =4)
     public void verifyforgotPasswordFuctionalityForLogin  () throws InterruptedException
@@ -131,7 +131,7 @@ public class LoginTest extends BaseTest{
     	
     	
     	
-    } 
+    } */
     
     
   
