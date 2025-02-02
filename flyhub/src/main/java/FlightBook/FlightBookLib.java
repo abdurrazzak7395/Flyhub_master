@@ -62,6 +62,12 @@ public class FlightBookLib extends FlightBookLocator {
 
 	}
 
+	public static void autoSetup(WebDriver driver) {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get("http://bdmid.dev.flyhub.com");
+	}
+
 	public void domesticOneWayBookAdult() throws InterruptedException {
 		
 		//Thread.sleep(25000);

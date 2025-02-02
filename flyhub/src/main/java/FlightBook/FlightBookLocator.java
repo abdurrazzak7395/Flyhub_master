@@ -2,28 +2,30 @@ package FlightBook;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebDriver;
 
 public class FlightBookLocator {
 
 	@FindBy(xpath = "//label[contains(text(),'One-Way')]")
 	private WebElement oneWayButton;
 
-	public WebElement getoneWayButton() {
+	public WebElement getOneWayButton() {
 		return oneWayButton;
 	}
 
 	@FindBy(xpath = "//div[@class='form-check hal-radio multi']")
 	private WebElement multiCityButton;
 
-	public WebElement getmultiCityButton() {
+	public WebElement getMultiCityButton() {
 		return multiCityButton;
 	}
 
 	@FindBy(xpath = "//div[@id='from_airport_dropdown']//input[@id='departure_1']")
-	private WebElement From;
+	private WebElement from;
 
 	public WebElement getFrom() {
-		return From;
+		return from;
 	}
 	
 	
@@ -31,67 +33,67 @@ public class FlightBookLocator {
 	@FindBy(xpath = "/html/body/main/section/div/div/div/div[1]/div[2]/div[1]/form/div[3]/div[1]/div[1]/div/div[1]/div[2]")
 	private WebElement fromSelect;
 
-	public WebElement getfromSelect() {
+	public WebElement getFromSelect() {
 		return fromSelect;
 	}
 	
 	@FindBy(xpath = "//div[@class='typeahead dropdown-menu flightDropDownData show']")
 	private WebElement toSelect;
 
-	public WebElement gettoSelect() {
+	public WebElement getToSelect() {
 		return toSelect;
 		
 		
 	}
 	@FindBy(xpath = "//div[@id='to_airport_dropdown']//input[@id='arrival_1']")
-	private WebElement To;
+	private WebElement to;
 
 	public WebElement getTo() {
-		return To;
+		return to;
 	}
 
 	@FindBy(xpath = "//input[@id='prefferedCarriers']")
 	private WebElement preferredAirline;
 
-	public WebElement getpreferredAirline() {
+	public WebElement getPreferredAirline() {
 		return preferredAirline;
 	}
 
 	@FindBy(xpath = "//input[@id='departure_2']")
 	private WebElement fromSecond;
 
-	public WebElement getfromSecond() {
+	public WebElement getFromSecond() {
 		return fromSecond;
 	}
 	
 	//span[contains(text(),'DXB')]
 	@FindBy(xpath = "/html/body/main/section/div/div/div/div[1]/div[2]/div[1]/form/div[3]/div[2]/div[1]/div/div[1]/div[2]")
-	private WebElement selectfromSecond;
+	private WebElement selectFromSecond;
 
-	public WebElement getselectfromSecond() {
-		return selectfromSecond;
+	public WebElement getSelectFromSecond() {
+		return selectFromSecond;
 	}
 	
 	
 	@FindBy(xpath = "//input[@id='arrival_2']")
 	private WebElement toSecond;
 
-	public WebElement gettoSecond() {
+	public WebElement getToSecond() {
 		return toSecond;
 	}
 	
 	//span[contains(text(),'SIN')]
 		@FindBy(xpath = "/html/body/main/section/div/div/div/div[1]/div[2]/div[1]/form/div[3]/div[2]/div[1]/div/div[3]/div[2]")
-		private WebElement selecttoSecond;
+		private WebElement selectToSecond;
 
-		public WebElement getselecttoSecond() {
-			return selecttoSecond;
+		public WebElement getSelectToSecond() {
+			return selectToSecond;
 		}
 
 	@FindBy(xpath = "//button[contains(text(),'Search Flights')]")
 	private WebElement searchFlights;
 
-	public WebElement getsearchFlights() {
+	public WebElement getSearchFlights() {
 		return searchFlights;
 	}
 	
@@ -100,7 +102,7 @@ public class FlightBookLocator {
 	@FindBy(xpath = "(//button[normalize-space()='View Fares'])[1]")
 	private WebElement viewFares;
 
-	public WebElement getviewFares() {
+	public WebElement getViewFares() {
 		return viewFares;
 	}
 	
@@ -109,15 +111,15 @@ public class FlightBookLocator {
 
 	@FindBy(xpath = "//*[@id='btnb1_0-0']")  
 	protected
-	 WebElement viewFarebookNow;
-	public WebElement getviewFarebookNow() {
-		return viewFarebookNow;
+	 WebElement viewFareBookNow;
+	public WebElement getViewFareBookNow() {
+		return viewFareBookNow;
 	}
 	
 	
 	@FindBy(xpath = "//*[@id='btnb1_0-0']")
 	private WebElement bookNow;
-	public WebElement getbookNow() {
+	public WebElement getBookNow() {
 		return bookNow;
 	}
 	
@@ -127,7 +129,7 @@ public class FlightBookLocator {
 			@FindBy(xpath = "/html/body/main/section/div/div/div/div[2]/div[3]/div[2]/div[4]/div[3]/div[1]/div[1]/div[2]/button")
 	private WebElement viewFare;
 
-	public WebElement getviewFare() {
+	public WebElement getViewFare() {
 		return viewFare;
 	}
 	
@@ -135,42 +137,42 @@ public class FlightBookLocator {
 	@FindBy(xpath = "//input[@id='Passengers_0__FirstName']")
 	private WebElement firstGivenName;
 
-	public WebElement getfirstGivenName() {
+	public WebElement getFirstGivenName() {
 		return firstGivenName;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_0__LastName']")
 	private WebElement lastSurname;
 
-	public WebElement getlastSurname() {
+	public WebElement getLastSurname() {
 		return lastSurname;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_0__DOB']")
 	private WebElement passengerAdultDob;
 
-	public WebElement getpassengerAdultDob() {
+	public WebElement getPassengerAdultDob() {
 		return passengerAdultDob;
 	}
 
 	@FindBy(xpath = "//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'21')]")
-	private WebElement pickpassengerAdultDob;
+	private WebElement pickPassengerAdultDob;
 
-	public WebElement getpickpassengerAdultDob() {
-		return pickpassengerAdultDob;
+	public WebElement getPickPassengerAdultDob() {
+		return pickPassengerAdultDob;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_0__PassportNum']")
 	private WebElement passportNumber;
 
-	public WebElement getpassportNumber() {
+	public WebElement getPassportNumber() {
 		return passportNumber;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_0__PDOE']")
 	private WebElement expiresOn;
 
-	public WebElement getexpiresOn() {
+	public WebElement getExpiresOn() {
 		return expiresOn;
 	}
 
@@ -182,67 +184,67 @@ public class FlightBookLocator {
 	}  */
 	
 	@FindBy(xpath = "//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'5')]")
-	private WebElement pickexpiresOn;
+	private WebElement pickExpiresOn;
 
-	public WebElement getpickexpiresOn() {
-		return pickexpiresOn;
+	public WebElement getPickExpiresOn() {
+		return pickExpiresOn;
 	}
 
 	
 	@FindBy(xpath = "//label[@class='m-0']")
 	private WebElement addToTravellersList;
 
-	public WebElement getaddToTravellersList() {
+	public WebElement getAddToTravellersList() {
 		return addToTravellersList;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_1__FirstName']")
-	private WebElement secondfirstGivenName;
+	private WebElement secondFirstGivenName;
 
-	public WebElement getsecondfirstGivenName() {
-		return secondfirstGivenName;
+	public WebElement getSecondFirstGivenName() {
+		return secondFirstGivenName;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_1__LastName']")
-	private WebElement secondlastSurname;
+	private WebElement secondLastSurname;
 
-	public WebElement getsecondlastSurname() {
-		return secondlastSurname;
+	public WebElement getSecondLastSurname() {
+		return secondLastSurname;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_1__DOB']")
-	private WebElement secondpassengerDob;
+	private WebElement secondPassengerDob;
 
-	public WebElement getsecondpassengerDob() {
-		return secondpassengerDob;
+	public WebElement getSecondPassengerDob() {
+		return secondPassengerDob;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_1__DOB_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'21')]")
-	private WebElement secondpickpassengerDob;
+	private WebElement secondPickPassengerDob;
 
-	public WebElement getsecondpickpassengerDob() {
-		return secondpickpassengerDob;
+	public WebElement getSecondPickPassengerDob() {
+		return secondPickPassengerDob;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_1__PassportNum']")
-	private WebElement secondpassportNumber;
+	private WebElement secondPassportNumber;
 
-	public WebElement getsecondpassportNumber() {
-		return secondpassportNumber;
+	public WebElement getSecondPassportNumber() {
+		return secondPassportNumber;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_1__PDOE']")
-	private WebElement secondexpiresOn;
+	private WebElement secondExpiresOn;
 
-	public WebElement getsecondexpiresOn() {
-		return secondexpiresOn;
+	public WebElement getSecondExpiresOn() {
+		return secondExpiresOn;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_1__PDOE_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'5')]")
-	private WebElement secondpickexpiresOn;
+	private WebElement secondPickExpiresOn;
 
-	public WebElement getsecondpickexpiresOn() {
-		return secondpickexpiresOn;
+	public WebElement getSecondPickExpiresOn() {
+		return secondPickExpiresOn;
 	}
 
 	
@@ -251,218 +253,218 @@ public class FlightBookLocator {
 	@FindBy(xpath = "//input[@id='Email']")
 	private WebElement emailAddress;
 
-	public WebElement getemailAddress() {
+	public WebElement getEmailAddress() {
 		return emailAddress;
 	}
 
 	@FindBy(xpath = "//input[@id='PhoneNo']")
 	private WebElement mobileNumber;
 
-	public WebElement getmobileNumber() {
+	public WebElement getMobileNumber() {
 		return mobileNumber;
 	}
 
 	@FindBy(xpath = "//label[@for='chkfare']")
-	private WebElement fareRulescbox;
+	private WebElement fareRulesCbox;
 
-	public WebElement getfareRulescbox() {
-		return fareRulescbox;
+	public WebElement getFareRulesCbox() {
+		return fareRulesCbox;
 	}
 
 	@FindBy(xpath = "//label[@for='chkterms']")
-	private WebElement termsAndConditionscbox;
+	private WebElement termsAndConditionsCbox;
 
-	public WebElement gettermsAndConditionscbox() {
-		return termsAndConditionscbox;
+	public WebElement getTermsAndConditionsCbox() {
+		return termsAndConditionsCbox;
 	}
 
 	@FindBy(xpath = "//button[contains(text(),'Book and Hold')]")
 	private WebElement bookAndHold;
 
-	public WebElement getbookAndHold() {
+	public WebElement getBookAndHold() {
 		return bookAndHold;
 	}
 
 	@FindBy(xpath = "//button[contains(text(),'Instant Ticketing')]")
 	private WebElement instantTicketing;
 
-	public WebElement getinstantTicketing() {
+	public WebElement getInstantTicketing() {
 		return instantTicketing;
 	}
 
 	@FindBy(xpath = "//button[@id='btnbook']")
 	private WebElement confirmBooking;
 
-	public WebElement getconfirmBooking() {
+	public WebElement getConfirmBooking() {
 		return confirmBooking;
 	}
 
 	@FindBy(xpath = "//button[@id='OrderTktConfirmBtn']")
 	private WebElement orderTicket;
 
-	public WebElement getorderTicket() {
+	public WebElement getOrderTicket() {
 		return orderTicket;
 	}
 
 	@FindBy(xpath = "//button[@id='confirmPaymentBtn']")
 	private WebElement confirmWithPayment;
 
-	public WebElement getconfirmWithPayment() {
+	public WebElement getConfirmWithPayment() {
 		return confirmWithPayment;
 	}
 
 	@FindBy(xpath = "//button[@class='navToggleBtn navigationToggleBtn']")
-	private WebElement Menu;
+	private WebElement menu;
 
 	public WebElement getMenu() {
-		return Menu;
+		return menu;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'In Process')]")
-	private WebElement inprocessQueue;
+	private WebElement inProcessQueue;
 
-	public WebElement getinprocessQueue() {
-		return inprocessQueue;
+	public WebElement getInProcessQueue() {
+		return inProcessQueue;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'AssignToMe')]")
 	private WebElement assignToMe;
 
-	public WebElement getassignToMe() {
+	public WebElement getAssignToMe() {
 		return assignToMe;
 	}
 
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]")
 	private WebElement selectInProcessLink;
 
-	public WebElement getselectInProcessLink() {
+	public WebElement getSelectInProcessLink() {
 		return selectInProcessLink;
 	}
 
 	@FindBy(xpath = "//body[@class='hideHeaderMsg']/main/section[@class='searchMainSection']/div[@class='container']/div[@class='booking-flight']/div[@class='container print-container']/div[@class='row']/div[@class='col-lg-3']/div[@class='right-sidebar']/div[3]/button[1]")
 	private WebElement startTicketingOperation;
 
-	public WebElement getstartTicketingOperation() {
+	public WebElement getStartTicketingOperation() {
 		return startTicketingOperation;
 	}
 
 	@FindBy(xpath = "//div[@class='filter-option-inner']")
 	private WebElement selectVendor;
 
-	public WebElement getselectVendor() {
+	public WebElement getSelectVendor() {
 		return selectVendor;
 	}
 
 	@FindBy(xpath = "//a[@id='bs-select-1-1']")
 	private WebElement selectingVendor;
 
-	public WebElement getselectingVendor() {
+	public WebElement getSelectingVendor() {
 		return selectingVendor;
 	}
 
 	@FindBy(xpath = "//button[@id='btnEditVendor']")
 	private WebElement updateVendor;
 
-	public WebElement getupdateVendor() {
+	public WebElement getUpdateVendor() {
 		return updateVendor;
 	}
 
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[6]/button[1]")
 	private WebElement ticketUpdateManual;
 
-	public WebElement getticketUpdateManual() {
+	public WebElement getTicketUpdateManual() {
 		return ticketUpdateManual;
 	}
 
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/form[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/div[1]/input[1]")
 	private WebElement ticketNumber;
 
-	public WebElement getticketNumber() {
+	public WebElement getTicketNumber() {
 		return ticketNumber;
 	}
 //	/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/input[1]
 		
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[7]/form[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/input[1]")
-	private WebElement ticketNumbertwo;
+	private WebElement ticketNumberTwo;
 
-	public WebElement getticketNumbertwo() {
-		return ticketNumbertwo;
+	public WebElement getTicketNumberTwo() {
+		return ticketNumberTwo;
 	}
 	
 	@FindBy(xpath = "//button[@id='btnManualUpdate']")
 	private WebElement ticketUpdate;
 
-	public WebElement getticketUpdate() {
+	public WebElement getTicketUpdate() {
 		return ticketUpdate;
 	}
 
 	@FindBy(xpath = "//div[@class='d-flex align-items-center']")
 	private WebElement printDownload;
 
-	public WebElement getprintDownload() {
+	public WebElement getPrintDownload() {
 		return printDownload;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Print Invoice')]")
 	private WebElement printInvoice;
 
-	public WebElement getprintInvoice() {
+	public WebElement getPrintInvoice() {
 		return printInvoice;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Print Customer Invoice')]")
 	private WebElement printCustomerInvoice;
 
-	public WebElement getprintCustomerInvoice() {
+	public WebElement getPrintCustomerInvoice() {
 		return printCustomerInvoice;
 	}
 
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[12]/div[1]/div[1]/a[3]")
 	private WebElement ticketWithPrice;
 
-	public WebElement getticketWithPrice() {
+	public WebElement getTicketWithPrice() {
 		return ticketWithPrice;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Ticket Without Price(Per Passenger)')]")
 	private WebElement ticketWithoutPrice;
 
-	public WebElement getticketWithoutPrice() {
+	public WebElement getTicketWithoutPrice() {
 		return ticketWithoutPrice;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Print Confirmation With Price')]")
 	private WebElement printConfirmationWithPrice;
 
-	public WebElement getprintConfirmationWithPrice() {
+	public WebElement getPrintConfirmationWithPrice() {
 		return printConfirmationWithPrice;
 	}
 
 	@FindBy(xpath = "//a[contains(text(),'Print Confirmation Without Price')]")
 	private WebElement printConfirmationWithoutPrice;
 
-	public WebElement getprintConfirmationWithoutPrice() {
+	public WebElement getPrintConfirmationWithoutPrice() {
 		return printConfirmationWithoutPrice;
 	}
 
 	@FindBy(xpath = "//input[@id='departuredate_1']")
 	private WebElement departureDate;
 
-	public WebElement getdepartureDate() {
+	public WebElement getDepartureDate() {
 		return departureDate;
 	}
 	
 	@FindBy(xpath = "//input[@id='departuredate_2']")
-	private WebElement seconddepartureDate;
+	private WebElement secondDepartureDate;
 
-	public WebElement getseconddepartureDate() {
-		return seconddepartureDate;
+	public WebElement getSecondDepartureDate() {
+		return secondDepartureDate;
 	}
 	@FindBy(xpath="//input[@id='txtUserName']")
 	private static WebElement userNameBox;
 
 	
-	public static WebElement getuserNameBox()
+	public static WebElement getUserNameBox()
 	{
 		return userNameBox;
 	}
@@ -470,7 +472,7 @@ public class FlightBookLocator {
 	@FindBy(xpath="//input[@id='txtPassword']")
 	private static WebElement passwordBox;
 	
-	public static WebElement getpasswordBox()
+	public static WebElement getPasswordBox()
 	{
 		return passwordBox;
 	}
@@ -478,7 +480,7 @@ public class FlightBookLocator {
 	@FindBy(xpath="//button[@id='load']")
 	private static WebElement loginButton;
 	
-	public static WebElement getloginButton()
+	public static WebElement getLoginButton()
 	{
 		return loginButton;
 	}
@@ -487,24 +489,24 @@ public class FlightBookLocator {
 	@FindBy(xpath="//span[contains(@class,'total_passengers')]")
 	private static WebElement selectPassenger;
 	
-	public static WebElement getselectPassenger()
+	public static WebElement getSelectPassenger()
 	{
 		return selectPassenger;
 	}
 	
 	
 	@FindBy(xpath="//div[contains(@class,'dropdown-item d-flex justify-content-between')]//div[contains(@class,'passengers adult_passengers')]//div[contains(@class,'quantity-nav')]//div[contains(@class,'quantity-button quantity-up')]")
-	private static WebElement increaseadultPassenger;
+	private static WebElement increaseAdultPassenger;
 	
-	public static WebElement getincreaseadultPassenger()
+	public static WebElement getIncreaseAdultPassenger()
 	{
-		return increaseadultPassenger;
+		return increaseAdultPassenger;
 	}
 	
 	@FindBy(xpath="//div[contains(@class,'dropdown-item d-flex flex-wrap justify-content-between')]//div[contains(@class,'passengers child_passengers')]//div[contains(@class,'quantity-nav')]//div[contains(@class,'quantity-button quantity-up')]")
 	private static WebElement increaseChildPassenger;
 	
-	public static WebElement getincreaseChildPassenger()
+	public static WebElement getIncreaseChildPassenger()
 	{
 		return increaseChildPassenger;
 	}
@@ -512,7 +514,7 @@ public class FlightBookLocator {
 	@FindBy(xpath="//div[contains(@class,'passengers infant_passengers')]//div[contains(@class,'quantity-nav')]//div[contains(@class,'quantity-button quantity-up')]")
 	private static WebElement increaseInfantPassenger;
 	
-	public static WebElement getincreaseInfantPassenger()
+	public static WebElement getIncreaseInfantPassenger()
 	{
 		return increaseInfantPassenger;
 	}
@@ -520,224 +522,224 @@ public class FlightBookLocator {
 	@FindBy(xpath="//input[@id='arrivaldate']")
 	private static WebElement returningDate;
 	
-	public static WebElement getreturningDate()
+	public static WebElement getReturningDate()
 	{
 		return returningDate;
 	}
 	@FindBy(xpath="//label[@for='selectAirline-0']")
 	private static WebElement departurePlane;
 	
-	public static WebElement getdeparturePlane()
+	public static WebElement getDeparturePlane()
 	{
 		return departurePlane;
 	}
 	@FindBy(xpath="//label[@for='airline-0']")
 	private static WebElement arrivalPlane;
 	
-	public static WebElement getarrivalPlane()
+	public static WebElement getArrivalPlane()
 	{
 		return arrivalPlane;
 	}
 	//button[@class='flyBtn greenBtn fillBtn btnRevalidate']
 	@FindBy(xpath="//button[@class='flyBtn greenBtn fillBtn btnRevalidate']")
-	private static WebElement returnflightBooknow;
+	private static WebElement returnFlightBookNow;
 	
-	public static WebElement getreturnflightBooknow()
+	public static WebElement getReturnFlightBookNow()
 	{
-		return returnflightBooknow;
+		return returnFlightBookNow;
 	}
 	
 	//input[@id='Passengers_2__FirstName']
 	@FindBy(xpath = "//input[@id='Passengers_2__FirstName']")
-	private WebElement thirdfirstGivenName;
+	private WebElement thirdFirstGivenName;
 
-	public WebElement getthirdfirstGivenName() {
-		return thirdfirstGivenName;
+	public WebElement getThirdFirstGivenName() {
+		return thirdFirstGivenName;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_2__LastName']")
-	private WebElement thirdlastSurname;
+	private WebElement thirdLastSurname;
 
-	public WebElement getthirdlastSurname() {
-		return thirdlastSurname;
+	public WebElement getThirdLastSurname() {
+		return thirdLastSurname;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_2__DOB']")
-	private WebElement thirdpassengerDob;
+	private WebElement thirdPassengerDob;
 
-	public WebElement getthirdpassengerAdultDob() {
-		return thirdpassengerDob;
+	public WebElement getThirdPassengerAdultDob() {
+		return thirdPassengerDob;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_2__DOB_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'3')]")
-	private WebElement thirdpickpassengerDob;
+	private WebElement thirdPickPassengerDob;
 
-	public WebElement getthirdpickpassengerDob() {
-		return thirdpickpassengerDob;
+	public WebElement getThirdPickPassengerDob() {
+		return thirdPickPassengerDob;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_2__PassportNum']")
-	private WebElement thirdpassportNumber;
+	private WebElement thirdPassportNumber;
 
-	public WebElement getthirdpassportNumber() {
-		return thirdpassportNumber;
+	public WebElement getThirdPassportNumber() {
+		return thirdPassportNumber;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_2__PDOE']")
-	private WebElement thirdexpiresOn;
+	private WebElement thirdExpiresOn;
 
-	public WebElement getthirdexpiresOn() {
-		return thirdexpiresOn;
+	public WebElement getThirdExpiresOn() {
+		return thirdExpiresOn;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_2__PDOE_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'7')]")
-	private WebElement thirdpickexpiresOn;
+	private WebElement thirdPickExpiresOn;
 
-	public WebElement getthirdpickexpiresOn() {
-		return thirdpickexpiresOn;
+	public WebElement getThirdPickExpiresOn() {
+		return thirdPickExpiresOn;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_3__FirstName']")
-	private WebElement fourthfirstGivenName;
+	private WebElement fourthFirstGivenName;
 
-	public WebElement getfourthfirstGivenName() {
-		return fourthfirstGivenName;
+	public WebElement getFourthFirstGivenName() {
+		return fourthFirstGivenName;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_3__LastName']")
-	private WebElement fourthlastSurname;
+	private WebElement fourthLastSurname;
 
-	public WebElement getfourthlastSurname() {
-		return fourthlastSurname;
+	public WebElement getFourthLastSurname() {
+		return fourthLastSurname;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_3__DOB']")
-	private WebElement fourthpassengerDob;
+	private WebElement fourthPassengerDob;
 
-	public WebElement getfourthpassengerAdultDob() {
-		return fourthpassengerDob;
+	public WebElement getFourthPassengerAdultDob() {
+		return fourthPassengerDob;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_3__DOB_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'3')]")
-	private WebElement fourthpickpassengerDob;
+	private WebElement fourthPickPassengerDob;
 
-	public WebElement getfourthpickpassengerDob() {
-		return fourthpickpassengerDob;
+	public WebElement getFourthPickPassengerDob() {
+		return fourthPickPassengerDob;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_3__PassportNum']")
-	private WebElement fourthpassportNumber;
+	private WebElement fourthPassportNumber;
 
-	public WebElement getfourthpassportNumber() {
-		return fourthpassportNumber;
+	public WebElement getFourthPassportNumber() {
+		return fourthPassportNumber;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_3__PDOE']")
-	private WebElement fourthexpiresOn;
+	private WebElement fourthExpiresOn;
 
-	public WebElement getfourthexpiresOn() {
-		return fourthexpiresOn;
+	public WebElement getFourthExpiresOn() {
+		return fourthExpiresOn;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_3__PDOE_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'7')]")
-	private WebElement fourthpickexpiresOn;
+	private WebElement fourthPickExpiresOn;
 
-	public WebElement getfourthpickexpiresOn() {
-		return fourthpickexpiresOn;
+	public WebElement getFourthPickExpiresOn() {
+		return fourthPickExpiresOn;
 	}
 
 
 	@FindBy(xpath = "//input[@id='Passengers_4__FirstName']")
-	private WebElement fifthfirstGivenName;
+	private WebElement fifthFirstGivenName;
 
-	public WebElement getfifthfirstGivenName() {
-		return fifthfirstGivenName;
+	public WebElement getFifthFirstGivenName() {
+		return fifthFirstGivenName;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_4__LastName']")
-	private WebElement fifthlastSurname;
+	private WebElement fifthLastSurname;
 
-	public WebElement getfifthlastSurname() {
-		return fifthlastSurname;
+	public WebElement getFifthLastSurname() {
+		return fifthLastSurname;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_4__DOB']")
-	private WebElement fifthpassengerDob;
+	private WebElement fifthPassengerDob;
 
-	public WebElement getfifthpassengerAdultDob() {
-		return fifthpassengerDob;
+	public WebElement getFifthPassengerAdultDob() {
+		return fifthPassengerDob;
 	}
 
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[6]/form[1]/div[10]/div[4]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[4]/div[1]")
-	private WebElement fifthpickpassengerDob;
+	private WebElement fifthPickPassengerDob;
 
-	public WebElement getfifthpickpassengerDob() {
-		return fifthpickpassengerDob;
+	public WebElement getFifthPickPassengerDob() {
+		return fifthPickPassengerDob;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_4__PassportNum']")
-	private WebElement fifthpassportNumber;
+	private WebElement fifthPassportNumber;
 
-	public WebElement getfifthpassportNumber() {
-		return fifthpassportNumber;
+	public WebElement getFifthPassportNumber() {
+		return fifthPassportNumber;
 	}
 
 	@FindBy(xpath = "//input[@id='Passengers_4__PDOE']")
-	private WebElement fifthexpiresOn;
+	private WebElement fifthExpiresOn;
 
-	public WebElement getfifthexpiresOn() {
-		return fifthexpiresOn;
+	public WebElement getFifthExpiresOn() {
+		return fifthExpiresOn;
 	}
 
 	@FindBy(xpath = "//table[@id='Passengers_4__PDOE_table']//tbody//tr//td[@role='presentation']//div[@class='picker__day picker__day--infocus picker__day--highlighted'][contains(text(),'7')]")
-	private WebElement fifthpickexpiresOn;
+	private WebElement fifthPickExpiresOn;
 
-	public WebElement getfifthpickexpiresOn() {
-		return fifthpickexpiresOn;
+	public WebElement getFifthPickExpiresOn() {
+		return fifthPickExpiresOn;
 	}
 	
 	//a[contains(text(),'Ticketed')]
 	@FindBy(xpath = "//a[contains(text(),'Ticketed')]")
 	private WebElement ticketedQueue;
 
-	public WebElement getticketedQueue() {
+	public WebElement getTicketedQueue() {
 		return  ticketedQueue;
 	}
 
 
 	//  /html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]/a[1]")
-	private WebElement pickticketedlink;
+	private WebElement pickTicketedLink;
 
-	public WebElement getpickticketedlink() {
-		return  pickticketedlink;
+	public WebElement getPickTicketedLink() {
+		return  pickTicketedLink;
 	}
 	
 	@FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[1]/a[1]")
 	private WebElement ticketWithPriceone;
 
-	public WebElement getticketWithPriceone() {
+	public WebElement getTicketWithPriceone() {
 		return  ticketWithPriceone;
 	}
 
 @FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[12]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]")
 	private WebElement ticketWithPriceEticket;
 
-	public WebElement getticketWithPriceEticket() {
+	public WebElement getTicketWithPriceEticket() {
 		return  ticketWithPriceEticket;
 	}
 
 @FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[1]/a[1]")
 	private WebElement ticketWithoutPriceone;
 
-	public WebElement getticketWithoutPriceone() {
+	public WebElement getTicketWithoutPriceone() {
 		return  ticketWithoutPriceone;
 	}
 
 @FindBy(xpath = "/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[12]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[2]/a[1]")
 	private WebElement ticketWithoutPriceEticket;
 
-	public WebElement getticketWithoutPriceEticket() {
+	public WebElement getTicketWithoutPriceEticket() {
 		return  ticketWithoutPriceEticket;
 	}
 
@@ -776,7 +778,7 @@ public class FlightBookLocator {
 			@FindBy(xpath="/html/body/div[2]/div[3]/div[1]/div/div/span/div[1]")
 	private WebElement captchaBox;
 
-	public WebElement getcaptchaBox()
+	public WebElement getCaptchaBox()
 	{
 		return captchaBox;
 	}
@@ -795,7 +797,7 @@ public class FlightBookLocator {
 	@FindBy(xpath="//span[@id='balAmount']")
 	private static WebElement balanceAmount;
 
-	public static WebElement getbalanceAmount()
+	public static WebElement getBalanceAmount()
 	{
 		return balanceAmount;
 	}
@@ -803,9 +805,13 @@ public class FlightBookLocator {
 			@FindBy(xpath="/html[1]/body[1]/main[1]/section[1]/div[1]/div[1]/div[1]/div[2]/div[3]/div[2]/div[5]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]")
 	private static WebElement ticketAmount;
 
-	public static WebElement getticketAmount()
+	public static WebElement getTicketAmount()
 	{
 		return ticketAmount;
+	}
+
+	public FlightBookLocator(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
 }
 
